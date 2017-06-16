@@ -1,0 +1,17 @@
+sudo : required
+dist : trusty
+cache : 
+  - apt
+branches : 
+  only : 
+    - master
+    - dev
+env:
+  global:
+    - HOME=/home/travis
+before_install :
+  - sudo apt-get update -qq
+script :
+  - curl -SsfL https://git.io/ubuntu-tmux-install | bash
+  - $HOME/usr/local/bin/tmux -V
+
