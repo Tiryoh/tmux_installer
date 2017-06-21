@@ -12,6 +12,6 @@ env:
 before_install :
   - sudo apt-get update -qq
 script :
-  - bash -eux -c "$(curl -SsfL https://git.io/ubuntu-tmux-install)"
+  - curl -SsfL https://git.io/ubuntu-tmux-install | sh -eux
   - $HOME/usr/local/bin/tmux -V
 
