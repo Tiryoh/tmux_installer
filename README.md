@@ -8,7 +8,7 @@ tmux setup scripts for GNU/Linux Ubuntu
 ### Simple Installation
 
 ```
-curl -SsfL https://git.io/ubuntu-tmux-install | bash
+curl -SsfL https://git.io/ubuntu-tmux-install | sh
 ```
 
 ### Manual Installation
