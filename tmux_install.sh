@@ -1,8 +1,8 @@
 #!/bin/bash -eu
 
-sudo apt update
-sudo apt install -y libevent-dev libncurses5-dev
-sudo apt install -y build-essential automake pkg-config
+sudo apt-get update
+sudo apt-get install -y libevent-dev libncurses5-dev
+sudo apt-get install -y build-essential automake pkg-config
 
 mkdir $HOME/tmp
 mkdir -p $HOME/usr/local
