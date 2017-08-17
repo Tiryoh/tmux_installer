@@ -14,4 +14,5 @@ before_install :
 script :
   - curl -SsfL https://git.io/ubuntu-tmux-install | sh -eux
   - $HOME/usr/local/bin/tmux -V
-
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
