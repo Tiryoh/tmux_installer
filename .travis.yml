@@ -1,18 +1,26 @@
-sudo : required
-dist : trusty
-cache : 
+sudo: required
+dist: trusty
+cache: 
   - apt
-branches : 
-  only : 
+branches: 
+  only: 
     - master
     - dev
 env:
   global:
     - HOME=/home/travis
-before_install :
+before_install:
   - sudo apt-get update -qq
-script :
+  - sudo apt-get upgrade -qq --allow-unauthenticated
+  - rsync -av ./ ~/
+  - sudo apt-get install -y kcov
+before_script:
+  - mkdir -p ~/coverage
+  - ls ~/
+  - kcov coverage tmux_install.sh
+  - rm -rf ~/tmp && rm -rf ~/usr
+script:
   - curl -SsfL https://git.io/ubuntu-tmux-install | sh -eux
   - $HOME/usr/local/bin/tmux -V
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) || echo "Codecov did not collect coverage reports"
