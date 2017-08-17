@@ -1,7 +1,8 @@
 # tmux_setup_scripts_ubuntu
 tmux setup scripts for GNU/Linux Ubuntu
 
-[![Build Status](https://travis-ci.org/Tiryoh/tmux_setup_scripts_ubuntu.svg?branch=master)](https://travis-ci.org/Tiryoh/tmux_setup_scripts_ubuntu)
+[![Build Status](https://travis-ci.org/Tiryoh/tmux_setup_scripts_ubuntu.svg?branch=master)](https://travis-ci.org/Tiryoh/tmux_setup_scripts_ubuntu) 
+[![codecov.io](https://codecov.io/github/Tiryoh/tmux_setup_scripts_ubuntu/coverage.svg?branch=master)](https://codecov.io/github/Tiryoh/tmux_setup_scripts_ubuntu?branch=master)
 
 ## Installation
 
